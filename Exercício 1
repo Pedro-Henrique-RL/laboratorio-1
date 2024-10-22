@@ -1,0 +1,5 @@
+def exercicio_1_for():
+    for num in range(1, 11):
+        print(num)
+
+exercicio_1_for()
