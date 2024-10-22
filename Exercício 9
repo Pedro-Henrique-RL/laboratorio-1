@@ -1,0 +1,15 @@
+contagem = {'A': 0, 'B': 0, 'C': 0}
+
+for i in range(20):
+    opiniao = input(f"Digite a sua opinião (A, B ou C) da pessoa {i + 1}: ").strip().upper()
+    
+    if opiniao in contagem:
+        contagem[opiniao] += 1
+
+porcentagens = {jornal: (contagem[jornal] / 20) * 100 for jornal in contagem}
+
+porcentagens_ordenadas = sorted(porcentagens.items(), key=lambda x: x[1])
+
+print("\nPorcentagens dos jornais em ordem crescente:")
+for jornal, porcentagem in porcentagens_ordenadas:
+    print(f"Jornal {jornal}: {porcentagem:.2f}%")
