@@ -1,0 +1,7 @@
+primeiro_numero = int(input("Digite o primeiro número (menor): "))
+segundo_numero = int(input("Digite o segundo número (maior): "))
+
+print(f"Números pares entre {primeiro_numero} e {segundo_numero}:")
+for num in range(primeiro_numero, segundo_numero + 1):
+    if num % 2 == 0:
+        print(num)
