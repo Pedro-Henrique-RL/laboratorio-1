@@ -1,0 +1,66 @@
+maior_idade = 0
+feminino_18_35_verdes_louros = 0
+total_azuis = 0
+total_verdes = 0
+total_castanhos_olhos = 0
+total_loiros = 0
+total_castanhos_cabelos = 0
+total_pretos = 0
+total_masculino = 0
+total_feminino = 0
+
+for i in range(15):
+    print(f"Entrevista {i + 1}:")
+    sexo = input("Sexo (M/F): ").strip().upper()
+    cor_olhos = input("Cor dos olhos (A - Azuis, V - Verdes, C - Castanhos): ").strip().upper()
+    cor_cabelos = input("Cor dos cabelos (L - Loiros, C - Castanhos, P - Pretos): ").strip().upper()
+    idade = int(input("Idade: "))
+
+    if idade > maior_idade:
+        maior_idade = idade
+
+    if sexo == 'F' and 18 <= idade <= 35 and cor_olhos == 'V' and cor_cabelos == 'L':
+        feminino_18_35_verdes_louros += 1
+
+    if cor_olhos == 'A':
+        total_azuis += 1
+    elif cor_olhos == 'V':
+        total_verdes += 1
+    elif cor_olhos == 'C':
+        total_castanhos_olhos += 1
+
+    if cor_cabelos == 'L':
+        total_loiros += 1
+    elif cor_cabelos == 'C':
+        total_castanhos_cabelos += 1
+    elif cor_cabelos == 'P':
+        total_pretos += 1
+
+    if sexo == 'M':
+        total_masculino += 1
+    elif sexo == 'F':
+        total_feminino += 1
+
+total_pessoas = 15
+porcentagem_azuis = (total_azuis / total_pessoas) * 100
+porcentagem_verdes = (total_verdes / total_pessoas) * 100
+porcentagem_castanhos_olhos = (total_castanhos_olhos / total_pessoas) * 100
+
+porcentagem_loiros = (total_loiros / total_pessoas) * 100
+porcentagem_castanhos_cabelos = (total_castanhos_cabelos / total_pessoas) * 100
+porcentagem_pretos = (total_pretos / total_pessoas) * 100
+
+porcentagem_masculino = (total_masculino / total_pessoas) * 100
+porcentagem_feminino = (total_feminino / total_pessoas) * 100
+
+print("\nResultados da pesquisa:")
+print(f"A maior idade do grupo: {maior_idade}")
+print(f"Quantidade de mulheres entre 18 e 35 anos com olhos verdes e cabelos louros: {feminino_18_35_verdes_louros}")
+print(f"Porcentagem de olhos azuis: {porcentagem_azuis:.2f}%")
+print(f"Porcentagem de olhos verdes: {porcentagem_verdes:.2f}%")
+print(f"Porcentagem de olhos castanhos: {porcentagem_castanhos_olhos:.2f}%")
+print(f"Porcentagem de cabelos loiros: {porcentagem_loiros:.2f}%")
+print(f"Porcentagem de cabelos castanhos: {porcentagem_castanhos_cabelos:.2f}%")
+print(f"Porcentagem de cabelos pretos: {porcentagem_pretos:.2f}%")
+print(f"Porcentagem de homens: {porcentagem_masculino:.2f}%")
+print(f"Porcentagem de mulheres: {porcentagem_feminino:.2f}%")
