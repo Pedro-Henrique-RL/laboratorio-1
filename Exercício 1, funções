@@ -1,0 +1,8 @@
+def funcao_ola():
+    print("Olá")
+
+def funcao_tchau():
+    print("Tchau")
+
+funcao_ola()
+funcao_tchau()
