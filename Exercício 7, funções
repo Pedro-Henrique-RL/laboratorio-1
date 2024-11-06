@@ -1,0 +1,18 @@
+def converter_24h_para_12h(hora, minutos):
+    if hora == 0:
+        return 12, minutos, "A.M."
+    elif hora == 12:
+        return 12, minutos, "P.M."
+    elif hora > 12:
+        return hora - 12, minutos, "P.M."
+    else:
+        return hora, minutos, "A.M."
+
+def mostrar_hora_formatada(hora, minutos, periodo):
+    print(f"A hora convertida é: {hora}:{minutos:02d} {periodo}")
+
+hora = int(input("Digite a hora (0-23): "))
+minutos = int(input("Digite os minutos (0-59): "))
+
+hora_convertida, minutos_convertidos, periodo = converter_24h_para_12h(hora, minutos)
+mostrar_hora_formatada(hora_convertida, minutos_convertidos, periodo)
