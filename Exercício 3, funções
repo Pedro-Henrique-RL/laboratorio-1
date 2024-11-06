@@ -1,0 +1,9 @@
+def calcular_valor(total_laranjas):
+    if total_laranjas <= 12:
+        return total_laranjas * 0.40
+    else:
+        return total_laranjas * 0.25
+
+total_laranjas = int(input("Digite o total de laranjas compradas: "))
+valor_total = calcular_valor(total_laranjas)
+print(f"O valor total da compra é: R${valor_total:.2f}")
