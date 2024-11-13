@@ -1,0 +1,16 @@
+def valores_pares():
+    vetor = []
+    while len(vetor) < 10:
+        valor = int(input(f"Digite um valor distinto para a posição {len(vetor) + 1}: "))
+        if valor not in vetor:
+            vetor.append(valor)
+        else:
+            print("Valor já existe no vetor. Digite um valor distinto.")
+
+    pares = [(valor, idx) for idx, valor in enumerate(vetor) if valor % 2 == 0]
+    
+    print("\nValores pares e suas posições:")
+    for valor, posicao in pares:
+        print(f"Valor: {valor}, Posição: {posicao}")
+
+valores_pares()
