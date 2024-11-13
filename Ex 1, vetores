@@ -1,0 +1,13 @@
+def processar_vetor():
+    vetor = [int(input(f"Digite o valor para a posição {i+1}: ")) for i in range(8)]
+    
+    maiores_30 = [num for num in vetor if num > 30]
+    soma_maiores_30 = sum(maiores_30)
+    soma_total = sum(vetor)
+    
+    print("\nVetor:", vetor)
+    print(f"Números maiores que 30: {maiores_30}")
+    print(f"Soma dos números maiores que 30: {soma_maiores_30}")
+    print(f"Soma de todos os números: {soma_total}")
+
+processar_vetor()
