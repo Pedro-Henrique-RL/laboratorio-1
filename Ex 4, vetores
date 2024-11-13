@@ -1,0 +1,15 @@
+def inverter_vetor():
+    vetor_a = []
+    while len(vetor_a) < 10:
+        valor = int(input(f"Digite um valor distinto para a posição {len(vetor_a) + 1}: "))
+        if valor not in vetor_a:
+            vetor_a.append(valor)
+        else:
+            print("Valor já existe no vetor. Digite um valor distinto.")
+
+    vetor_b = vetor_a[::-1]
+
+    print("\nVetor A:", vetor_a)
+    print("Vetor B (invertido):", vetor_b)
+
+inverter_vetor()
