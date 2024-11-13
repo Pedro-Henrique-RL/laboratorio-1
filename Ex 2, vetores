@@ -1,0 +1,17 @@
+def valores_maiores_100():
+    vetor = []
+    while len(vetor) < 10:
+        valor = int(input(f"Digite um valor distinto para a posição {len(vetor) + 1}: "))
+        if valor not in vetor:
+            vetor.append(valor)
+        else:
+            print("Valor já existe no vetor. Digite um valor distinto.")
+
+    maiores_100 = [num for num in vetor if num > 100]
+    
+    print("\nVetor:", vetor)
+    print(f"Quantidade de valores maiores que 100: {len(maiores_100)}")
+    if maiores_100:
+        print(f"Valores maiores que 100: {maiores_100}")
+
+valores_maiores_100()
