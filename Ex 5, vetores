@@ -1,0 +1,47 @@
+def menu_vetor():
+    vetor = []
+
+    while True:
+        print("\nMenu:")
+        print("1 - Inserir item")
+        print("2 - Retirar item")
+        print("3 - Listar itens")
+        print("4 - Retirar todos os itens")
+        print("5 - Sair")
+        
+        opcao = int(input("Escolha uma opção: "))
+        
+        if opcao == 1:
+            item = input("Digite o item para inserir: ")
+            vetor.append(item)
+            print(f"Item '{item}' inserido com sucesso.")
+        
+        elif opcao == 2:
+            if vetor:
+                item = input("Digite o item para retirar: ")
+                if item in vetor:
+                    vetor.remove(item)
+                    print(f"Item '{item}' removido com sucesso.")
+                else:
+                    print("Item não encontrado no vetor.")
+            else:
+                print("O vetor está vazio.")
+        
+        elif opcao == 3:
+            if vetor:
+                print("\nItens no vetor:", vetor)
+            else:
+                print("O vetor está vazio.")
+        
+        elif opcao == 4:
+            vetor.clear()
+            print("Todos os itens foram retirados do vetor.")
+        
+        elif opcao == 5:
+            print("Saindo do programa.")
+            break
+        
+        else:
+            print("Opção inválida. Tente novamente.")
+
+menu_vetor()
